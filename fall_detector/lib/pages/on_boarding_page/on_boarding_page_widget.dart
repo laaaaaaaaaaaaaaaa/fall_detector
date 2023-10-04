@@ -61,70 +61,73 @@ class _OnBoardingPageWidgetState extends State<OnBoardingPageWidget> {
           centerTitle: false,
           elevation: 2.0,
         ),
-        body: SafeArea(
-          top: true,
-          child: Container(
-            width: MediaQuery.sizeOf(context).width * 1.0,
-            height: MediaQuery.sizeOf(context).height * 1.0,
-            decoration: BoxDecoration(
-              color: Color(0xFFF1F4F8),
-            ),
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                ListView(
-                  padding: EdgeInsets.zero,
-                  shrinkWrap: true,
-                  scrollDirection: Axis.vertical,
-                  children: [
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 95.0, 0.0, 15.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8.0),
-                        child: Image.asset(
-                          'assets/images/aaaa.png',
-                          width: MediaQuery.sizeOf(context).width * 0.3,
-                          height: MediaQuery.sizeOf(context).height * 0.3,
-                          fit: BoxFit.cover,
+        body: SingleChildScrollView(
+          child: SafeArea(
+            top: true,
+            child: Container(
+              width: MediaQuery.sizeOf(context).width * 1.0,
+              height: MediaQuery.sizeOf(context).height * 1.0,
+              decoration: BoxDecoration(
+                color: Color(0xFFF1F4F8),
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  ListView(
+                    padding: EdgeInsets.zero,
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(
+                            0.0, 95.0, 0.0, 15.0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(8.0),
+                          child: Image.asset(
+                            'assets/images/aaaa.png',
+                            width: MediaQuery.sizeOf(context).width * 0.3,
+                            height: MediaQuery.sizeOf(context).height * 0.3,
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-                Padding(
-                  padding:
-                      EdgeInsetsDirectional.fromSTEB(18.0, 45.0, 18.0, 0.0),
-                  child: RichText(
-                    textScaleFactor: MediaQuery.of(context).textScaleFactor,
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: 'Jatuh',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: FlutterFlowTheme.of(context).success,
-                                    fontSize: 18.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                        ),
-                        TextSpan(
-                          text:
-                              ' pada lansia dapat memicu dan menyebabkan berbagai komplikasi penyakit lain yang mempengaruhi kesehatan serta mengganggu aktivitas sehari-hari. Risiko ini terjadi seiring bertambahnya usia, karena tingkat kontrol keseimbangan yang dimiliki seringkali mengalami penurunan.',
-                          style: TextStyle(),
-                        )
-                      ],
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Roboto',
-                            color: Colors.black,
-                            fontSize: 18.0,
-                          ),
-                    ),
-                    textAlign: TextAlign.start,
+                    ],
                   ),
-                ),
-              ],
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(18.0, 45.0, 18.0, 0.0),
+                    child: RichText(
+                      textScaleFactor: MediaQuery.of(context).textScaleFactor,
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: 'Jatuh',
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  color: FlutterFlowTheme.of(context).success,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                          ),
+                          TextSpan(
+                            text:
+                                ' pada lansia dapat memicu dan menyebabkan berbagai komplikasi penyakit lain yang mempengaruhi kesehatan serta mengganggu aktivitas sehari-hari. Risiko ini terjadi seiring bertambahnya usia, karena tingkat kontrol keseimbangan yang dimiliki seringkali mengalami penurunan.',
+                            style: TextStyle(),
+                          )
+                        ],
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Roboto',
+                              color: Colors.black,
+                              fontSize: 18.0,
+                            ),
+                      ),
+                      textAlign: TextAlign.start,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
