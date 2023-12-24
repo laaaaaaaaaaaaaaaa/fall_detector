@@ -1,36 +1,24 @@
-import 'package:fall_detector/api/firebase_api.dart';
-import 'package:provider/provider.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/material.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'auth/firebase_auth/firebase_user_provider.dart';
 import 'auth/firebase_auth/auth_util.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+
 import 'backend/firebase/firebase_config.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
-import 'api/firebase_api.dart';
-import 'package:pusher_beams/pusher_beams.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  const instanceID = 'a4aa7582-e906-44b1-9bea-eadea0e6193d';
-  await PusherBeams.instance.start(instanceID);
-  await PusherBeams.instance.setDeviceInterests(["hello"]);
-
-  await Firebase.initializeApp();
-
   usePathUrlStrategy();
   await initFirebase();
-  await FirebaseApi().initNotifications();
 
   await FlutterFlowTheme.initialize();
 

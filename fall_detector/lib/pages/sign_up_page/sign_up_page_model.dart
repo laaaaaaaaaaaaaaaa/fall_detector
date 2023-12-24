@@ -1,5 +1,11 @@
+import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class SignUpPageModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this page.
@@ -15,8 +21,8 @@ class SignUpPageModel extends FlutterFlowModel {
   TextEditingController? namaLansiaFieldController;
   String? Function(BuildContext, String?)? namaLansiaFieldControllerValidator;
   // State field(s) for UmurLansiaField widget.
-  TextEditingController? umurLansiaFieldController;
-  String? Function(BuildContext, String?)? umurLansiaFieldControllerValidator;
+  TextEditingController? tanggalLahirFieldController;
+  String? Function(BuildContext, String?)? tanggalLahirFieldControllerValidator;
   // State field(s) for PasswordField widget.
   TextEditingController? passwordFieldController;
   late bool passwordFieldVisibility;
@@ -39,7 +45,7 @@ class SignUpPageModel extends FlutterFlowModel {
     usernameFieldController?.dispose();
     emailFieldController?.dispose();
     namaLansiaFieldController?.dispose();
-    umurLansiaFieldController?.dispose();
+    tanggalLahirFieldController?.dispose();
     passwordFieldController?.dispose();
     reEnterPasswordFieldController?.dispose();
   }

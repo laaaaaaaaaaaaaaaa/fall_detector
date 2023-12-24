@@ -6,6 +6,7 @@ import '/backend/schema/util/firestore_util.dart';
 import '/backend/schema/util/schema_util.dart';
 
 import 'index.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 
 class UsersRecord extends FirestoreRecord {
   UsersRecord._(
@@ -51,9 +52,9 @@ class UsersRecord extends FirestoreRecord {
   bool hasNamaLansia() => _namaLansia != null;
 
   // "umur_lansia" field.
-  int? _umurLansia;
-  int get umurLansia => _umurLansia ?? 0;
-  bool hasUmurLansia() => _umurLansia != null;
+  DateTime? _tanggalLahir;
+  DateTime? get tanggalLahir => _tanggalLahir ?? null;
+  bool hasTanggalLahir() => _tanggalLahir != null;
 
   // "username" field.
   String? _username;
@@ -68,7 +69,7 @@ class UsersRecord extends FirestoreRecord {
     _createdTime = snapshotData['created_time'] as DateTime?;
     _phoneNumber = snapshotData['phone_number'] as String?;
     _namaLansia = snapshotData['nama_lansia'] as String?;
-    _umurLansia = castToType<int>(snapshotData['umur_lansia']);
+    _tanggalLahir = castToType<DateTime>(snapshotData['tanggal_lahir']);
     _username = snapshotData['username'] as String?;
   }
 
@@ -113,7 +114,7 @@ Map<String, dynamic> createUsersRecordData({
   DateTime? createdTime,
   String? phoneNumber,
   String? namaLansia,
-  int? umurLansia,
+  DateTime? tanggalLahir,
   String? username,
 }) {
   final firestoreData = mapToFirestore(
@@ -125,7 +126,7 @@ Map<String, dynamic> createUsersRecordData({
       'created_time': createdTime,
       'phone_number': phoneNumber,
       'nama_lansia': namaLansia,
-      'umur_lansia': umurLansia,
+      'tanggal_lahir': tanggalLahir,
       'username': username,
     }.withoutNulls,
   );
@@ -145,7 +146,7 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.createdTime == e2?.createdTime &&
         e1?.phoneNumber == e2?.phoneNumber &&
         e1?.namaLansia == e2?.namaLansia &&
-        e1?.umurLansia == e2?.umurLansia &&
+        e1?.tanggalLahir == e2?.tanggalLahir &&
         e1?.username == e2?.username;
   }
 
@@ -158,7 +159,7 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.createdTime,
         e?.phoneNumber,
         e?.namaLansia,
-        e?.umurLansia,
+        e?.tanggalLahir,
         e?.username
       ]);
 
