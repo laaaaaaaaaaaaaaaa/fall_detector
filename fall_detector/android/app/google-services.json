@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "976382816729",
+    "project_id": "falldetector-98d21",
+    "storage_bucket": "falldetector-98d21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976382816729:android:1f1f5af0fbef86cb10e9c8",
+        "android_client_info": {
+          "package_name": "com.mycompany.TAlala"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "976382816729-89goommuub22helvkhuu4pcqr4vcmn2g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.TAlala",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "976382816729-k42r049ajlov22p4vu2oc8trklar1gjd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASTOphSrEUfwYJNCtX682Sfg1gdsFonFo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "976382816729-k42r049ajlov22p4vu2oc8trklar1gjd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "976382816729-ikjfr8u103s2dmh46j4kk29qkru1idvk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.TAlala"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
